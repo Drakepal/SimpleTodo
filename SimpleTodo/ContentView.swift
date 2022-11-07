@@ -105,14 +105,18 @@ struct ContentView: View {
                     }
                 }.pickerStyle(.segmented)
                 
-                Button("Save") {
-                 saveTask()
+                Button(action: {
+                    saveTask()
+                }) {
+                    Text("Save")
+                        .frame(maxWidth:.infinity)
+                 
                 }
                 .padding(10)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+                .frame(maxWidth: .infinity)
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
                 
                 List {
                     
